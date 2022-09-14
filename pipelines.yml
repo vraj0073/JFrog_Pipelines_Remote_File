@@ -13,7 +13,7 @@ resources:
       registry: Artifactory                                # <-- replace with your artifactory integration
       sourceRepository: testdocker               # <-- required if registry is Artifactory
       imageName: testdemo3.jfrog.io/testdocker/hello  # < -- replace with your image path and name
-      imageTag: latest
+      imageTag: 1
       autoPull: true
       
   - name: dbp_build_info
@@ -41,7 +41,7 @@ pipelines:
           dockerFileLocation: .
           dockerFileName: Dockerfile
           dockerImageName: testdemo3.jfrog.io/testdocker/hello  # replace with your image path and name
-          dockerImageTag: ${run_number}
+          dockerImageTag: 1
           inputResources:
             - name: dbp_repo
           integrations:
