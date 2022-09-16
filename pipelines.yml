@@ -9,7 +9,7 @@ pipelines:
   - name: pipelines_file
     steps:
       - name: REFILE_1
-        type: PowerShell
+        type: bash
         configuration:
           nodePool: final
           integrations:
@@ -18,6 +18,6 @@ pipelines:
             - name: RemoteFile_1
         execution:
           onExecute:
-            - write-output "executing step..."
+            - echo "executing step..."
             - jfrog rt dl generic-generic-local --sort-by=created --sort-order=desc --limit=1
         
