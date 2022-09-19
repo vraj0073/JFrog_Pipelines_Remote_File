@@ -3,15 +3,15 @@ resources:
     type: RemoteFile
     configuration:
       source: Artifactory
-      fileLocation: generic-generic-local # optional
+      fileLocation: generic-generic-local # name of the artifactory from which one need to deploy the file
      
 pipelines:
-  - name: pipelines_file
+  - name: pipelines_file # Name of pipeline
     steps:
       - name: REFILE_1
         type: bash
         configuration:
-          nodePool: default-dynamic-nodepool
+          nodePool: default-dynamic-nodepool # Name of node pool
           integrations:
             - name: Artifactory
           outputResources:
