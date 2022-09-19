@@ -11,7 +11,7 @@ pipelines:
       - name: REFILE_1
         type: bash
         configuration:
-          nodePool: final
+          nodePool: default-dynamic-nodepool
           integrations:
             - name: Artifactory
           outputResources:
