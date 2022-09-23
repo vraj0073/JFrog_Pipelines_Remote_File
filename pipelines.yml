@@ -3,7 +3,7 @@ resources:
     type: RemoteFile
     configuration:
       source: Artifactory
-      fileLocation: generic-generic-local # name of the artifactory from which one need to deploy the file
+      fileLocation: deploy-generic-local # name of the artifactory from which one need to deploy the file
      
 pipelines:
   - name: pipelines_file # Name of pipeline
@@ -19,7 +19,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - jfrog rt dl generic-generic-local/vraj .
+            - jfrog rt dl deploy-generic-local/vraj
             - ls
             - cd workspace
             - ls
