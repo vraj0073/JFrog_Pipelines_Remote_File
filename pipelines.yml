@@ -20,5 +20,5 @@ pipelines:
           onExecute:
             - echo "executing step..."
             - jfrog rt dl generic-generic-local/vraj/vraj.sh
-            - bash vraj.sh
+            - bash ls
         
