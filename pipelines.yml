@@ -19,7 +19,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - jfrog rt dl generic-generic-local/vraj/vraj.sh .
+            - jfrog rt dl generic-generic-local/vraj .
             - ls
             - cd workspace
             - cd download
