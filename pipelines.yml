@@ -22,5 +22,6 @@ pipelines:
             - jfrog rt dl generic-generic-local/vraj/vraj.sh .
             - ls
             - cd workspace
+            - cd download
             - ls
         
