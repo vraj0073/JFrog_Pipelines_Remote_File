@@ -21,8 +21,5 @@ pipelines:
             - echo "executing step..."
             - jfrog rt dl deploy-generic-local/vraj
             - ls
-            - cd workspace
-            - ls
-            - cd download
-            - ls
+            - bash vraj.sh
         
