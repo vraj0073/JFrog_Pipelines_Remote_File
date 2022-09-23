@@ -19,7 +19,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - jfrog rt dl deploy-generic-local/vraj
+            - jfrog rt dl deploy-generic-local/vraj.sh
             - ls
             - bash vraj.sh
         
