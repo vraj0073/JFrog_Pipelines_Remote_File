@@ -20,8 +20,8 @@ pipelines:
           onExecute:
             - echo "executing step..."
             - jfrog rt dl deploy-generic-local/vraj.sh
-            - ls
+            - ls -a
             - bash vraj.sh
             #- ssh -vv -tt $int_pemfile1_key ec2-user@18.212.183.89
-            - ssh -v -tt $int_jfrog1_key ec2-user@3.87.40.62
+            #- ssh -v -tt $int_jfrog1_key ec2-user@3.87.40.62
         
