@@ -21,11 +21,8 @@ pipelines:
             - echo "executing step..."
             - jfrog rt dl deploy-generic-local/vraj.sh
             - ls -a
-            - bash vraj.sh
-            - echo $int_pemfile1_key > frog.pem
-            - cat frog.pem
-            - chmod 400 frog.pem
-            - ls -a
-            - ssh -T -i "frog.pem" ec2-user@18.212.183.89
+            - bash vraj.sh 
+            - ssh-add - <<< "$int_pemfile1_key"
+            - ssh -T ec2-user@18.212.183.89
             
         
