@@ -23,7 +23,5 @@ pipelines:
             - ls
             - bash vraj.sh
             #- ssh -vv -tt $int_pemfile1_key ec2-user@18.212.183.89
-            - chcon --recursive unconfined_u:object_r:user_home_dir_t:s0 ${HOME}
-            - chcon --recursive unconfined_u:object_r:ssh_home_t:s0 ${HOME}/.ssh
             - ssh -v -tt $int_jfrog1_key ec2-user@3.87.40.62
         
