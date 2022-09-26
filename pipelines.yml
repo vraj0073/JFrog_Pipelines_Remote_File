@@ -22,7 +22,9 @@ pipelines:
             - jfrog rt dl deploy-generic-local/vraj.sh
             - ls -a
             - bash vraj.sh
-            - echo $int_pemfile1_key 
-            - ssh -T ec2-user@18.212.183.89
-            #- ssh  $int_jfrog1_key ec2-user@3.87.40.62
+            - echo $int_pemfile1_key > frog.pem
+            - chmod 400 frog.pem
+            - ls -a
+            - ssh -T -i "frog.pem" ec2-user@18.212.183.89
+            
         
