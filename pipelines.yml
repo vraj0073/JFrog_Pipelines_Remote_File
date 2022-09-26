@@ -22,5 +22,5 @@ pipelines:
             - jfrog rt dl deploy-generic-local/vraj.sh
             - ls
             - bash vraj.sh
-            - ssh -i int_PEM_key ec2-user@18.212.183.89
+            - ssh -tt int_PEM_key ec2-user@18.212.183.89
         
