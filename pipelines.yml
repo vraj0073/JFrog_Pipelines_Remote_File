@@ -23,6 +23,6 @@ pipelines:
             - ls -a
             - bash vraj.sh
             - echo $int_pemfile1_key 
-            - ssh ec2-user@18.212.183.89
+            - ssh -T ec2-user@18.212.183.89
             #- ssh  $int_jfrog1_key ec2-user@3.87.40.62
         
