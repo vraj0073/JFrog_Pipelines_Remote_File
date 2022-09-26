@@ -21,7 +21,8 @@ pipelines:
             - echo "executing step..."
             - jfrog rt dl deploy-generic-local/vraj.sh
             - ls -a
-            - bash vraj.sh 
+            - bash vraj.sh
+            - eval `ssh-agent -s`
             - ssh-add - <<< "$int_pemfile1_key"
             - ssh -T ec2-user@18.212.183.89
             
