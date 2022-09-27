@@ -23,9 +23,10 @@ pipelines:
             - ls -a
             - bash vraj.sh
             - sudo apt install sshpass
+            - sshpass
             #- eval `ssh-agent -s`
             #- echo "$int_pemfile1_key" | ssh-add -
            # - ssh-add - <<< "$int_pemfile1_key"
-            - ssh -T ec2-user@18.212.183.89
+            #- ssh -T ec2-user@18.212.183.89
             
         
