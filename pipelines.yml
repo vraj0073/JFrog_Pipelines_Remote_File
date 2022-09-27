@@ -22,7 +22,7 @@ pipelines:
             - jfrog rt dl deploy-generic-local/vraj.sh
             - ls -a
             - bash vraj.sh
-            - sshpass
+            - sudo apt install sshpass
             #- eval `ssh-agent -s`
             #- echo "$int_pemfile1_key" | ssh-add -
            # - ssh-add - <<< "$int_pemfile1_key"
