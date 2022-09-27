@@ -20,10 +20,12 @@ pipelines:
           onExecute:
             - echo "executing step..."
             - jfrog rt dl deploy-generic-local/vraj.sh
+            - jfrog rt dl deploy-generic-local/frog.sh
             - ls -a
             - bash vraj.sh
             - sudo apt install sshpass
-            - sshpass
+            - bash frog.sh
+            
             #- eval `ssh-agent -s`
             #- echo "$int_pemfile1_key" | ssh-add -
            # - ssh-add - <<< "$int_pemfile1_key"
