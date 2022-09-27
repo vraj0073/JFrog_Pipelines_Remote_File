@@ -22,8 +22,9 @@ pipelines:
             - jfrog rt dl deploy-generic-local/vraj.sh
             - ls -a
             - bash vraj.sh
-            - eval `ssh-agent -s`
-            - echo "$int_pemfile1_key" | ssh-add -
+            - sshpass
+            #- eval `ssh-agent -s`
+            #- echo "$int_pemfile1_key" | ssh-add -
            # - ssh-add - <<< "$int_pemfile1_key"
             - ssh -T ec2-user@18.212.183.89
             
