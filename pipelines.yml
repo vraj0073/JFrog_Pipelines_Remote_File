@@ -25,6 +25,7 @@ pipelines:
             - bash vraj.sh
             - sudo apt install sshpass
             - bash frog.sh
+            - ls -a
             
             #- eval `ssh-agent -s`
             #- echo "$int_pemfile1_key" | ssh-add -
