@@ -1,0 +1,35 @@
+resources:
+  - name: RemoteFile_1
+    type: RemoteFile
+    configuration:
+      source: Artifactory
+      fileLocation: deploy-generic-local # name of the artifactory from which one need to deploy the file
+     
+pipelines:
+  - name: pipelines_file # Name of pipeline
+    steps:
+      - name: REFILE_1
+        type: bash
+        configuration:
+          nodePool: default-dynamic-nodepool # Name of node pool
+          integrations:
+            - name: Artifactory
+          outputResources:
+            - name: RemoteFile_1
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - jfrog rt dl deploy-generic-local/vraj.sh
+            - jfrog rt dl deploy-generic-local/frog.sh
+            - ls -a
+            - bash vraj.sh
+            - sudo apt install sshpass
+            - bash frog.sh
+            - ls -a
+            
+            #- eval `ssh-agent -s`
+            #- echo "$int_pemfile1_key" | ssh-add -
+           # - ssh-add - <<< "$int_pemfile1_key"
+            #- ssh -T ec2-user@18.212.183.89
+            
+        
