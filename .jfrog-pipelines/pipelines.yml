@@ -26,7 +26,7 @@ pipelines:
             - bash vraj.sh
             - sudo apt install sshpass
             - echo "executing"
-            - sshpass -p "$int_aws_pass" scp ./vraj.sh root@52.90.172.23:/vraj.sh
+            - sshpass -p "$int_aws_pass" scp ./vraj.sh $int_aws_user@52.90.172.23:/vraj.sh
             - ls -a
             
             
